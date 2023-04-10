@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Outfit", sans-serif;
-  }
+    html {
+        font-family: "Outfit", sans-serif;
+    }
+}
+
+@layer components {
+    .section-heading {
+        @apply text-bold text-[44px];
+    }
 }
