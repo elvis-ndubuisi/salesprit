@@ -8,11 +8,9 @@ import vector2 from "../assets/patterns/vector-2.svg"
 import vector3 from "../assets/patterns/vector-3.svg"
 import bubbles from "../assets/patterns/bubble-pattern.svg"
 
-// TODO: check max width for illustration
-// TODO: fix vector images that are not displaying
 export default function AuthLayout() {
     return (
-        <section className="w-full h-full flex items-center justify-center bg-sl-light relative">
+        <section className="w-full h-full flex items-center justify-center relative">
             <section className="h-full flex-1 grid items-center justify-center">
                 <img
                     src={illustration}
@@ -29,7 +27,7 @@ export default function AuthLayout() {
             <img
                 src={vector1}
                 alt="pattern top left"
-                className="absolute top-0 left-0"
+                className="absolute -bottom-16 left-0"
             />
             <img
                 src={vector}
@@ -43,8 +41,8 @@ export default function AuthLayout() {
             />
             <img
                 src={vector3}
-                alt="pattern bottom right"
-                className="absolute bottom-0 -right-0"
+                alt="pattern top left"
+                className="absolute top-0 left-0"
             />
 
             {/* Bubbles */}
