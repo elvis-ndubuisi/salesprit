@@ -35,8 +35,8 @@ export function AtIcon() {
 export function GoogleIcon() {
     return (
         <svg
-            width="30"
-            height="30"
+            width="28"
+            height="28"
             viewBox="0 0 30 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -115,8 +115,8 @@ export function GoogleIcon() {
 export function FacebookIcon() {
     return (
         <svg
-            width="29"
-            height="29"
+            width="27"
+            height="27"
             viewBox="0 0 29 29"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

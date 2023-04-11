@@ -14,7 +14,7 @@ export default function Login() {
                 <h1 className="auth-heading">Welcome back</h1>
             </div>
 
-            <fieldset>
+            <fieldset className="flex flex-col gap-5 mb-4">
                 <Input
                     type="text"
                     placeholder="Email address"
@@ -32,7 +32,12 @@ export default function Login() {
                 >
                     <LockIcon />
                 </Input>
-                <Link to="/forget-password">forget password?</Link>
+                <Link
+                    to="/forget-password"
+                    className="linkable-button text-right"
+                >
+                    forget password?
+                </Link>
             </fieldset>
 
             <Button isPrimary handleClick={() => {}}>
@@ -41,9 +46,9 @@ export default function Login() {
 
             <SocialSignIn />
 
-            <p className="font-medium text-[1.3rem]">
+            <p className="font-medium text-[1.1rem] text-center">
                 Don&apos;t have an account?{" "}
-                <Link to="register" className="clickable-button">
+                <Link to="register" className="linkable-button">
                     Sign Up
                 </Link>
             </p>

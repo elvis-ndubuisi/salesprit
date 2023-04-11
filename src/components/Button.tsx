@@ -10,7 +10,7 @@ export default function Button({ isPrimary, children, handleClick }: IProps) {
         <button
             type="button"
             onClick={handleClick}
-            className={`text-center font-semibold text-xl rounded-lg py-[1.125rem] px-11 capitalize text-white ${
+            className={`text-center font-semibold text-lg rounded-lg py-3 px-7 capitalize text-white ${
                 isPrimary ? "bg-sl-secondary" : "bg-sl-primary"
             }`}
         >
