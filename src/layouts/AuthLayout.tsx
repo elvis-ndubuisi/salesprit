@@ -10,7 +10,7 @@ import bubbles from "../assets/patterns/bubble-pattern.svg"
 
 export default function AuthLayout() {
     return (
-        <section className="w-full h-full flex items-center justify-center relative">
+        <section className="h-full flex items-center justify-center relative overflow-hidden">
             <section className="h-full flex-1 grid items-center justify-center">
                 <img
                     src={illustration}
