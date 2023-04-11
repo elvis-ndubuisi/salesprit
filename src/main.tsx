@@ -8,6 +8,10 @@ import PosLayout from "./layouts/PosLayout"
 import AuthLayout from "./layouts/AuthLayout"
 import Splash from "./screens/Splash"
 import Login from "./screens/Login"
+import SignUp from "./screens/SignUp"
+import ForgetPassword from "./screens/ForgetPassword"
+import ResetPassword from "./screens/ResetPassword"
+import PasswordChanged from "./screens/PasswordChanged"
 
 const router = createBrowserRouter([
     {
@@ -25,6 +29,9 @@ const router = createBrowserRouter([
                 element: <AuthLayout />,
                 children: [
                     { path: "login", element: <Login /> },
+                    { path: "register", element: <SignUp /> },
+                    { path: "forget-password", element: <ForgetPassword /> },
+                    { path: "reset-password", element: <ResetPassword /> },
                     { path: "logout", element: <div>log out elem</div> },
                 ],
             },
