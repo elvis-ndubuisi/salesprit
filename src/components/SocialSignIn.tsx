@@ -17,13 +17,6 @@ export default function SocialSignIn() {
                     <FacebookIcon />
                 </SocialButton>
             </div>
-
-            <p className="font-medium text-[1.3rem]">
-                Don&apos;t have an account?{" "}
-                <Link to="register" className="clickable-button">
-                    Sign Up
-                </Link>
-            </p>
         </div>
     )
 }

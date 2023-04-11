@@ -40,6 +40,13 @@ export default function Login() {
             </Button>
 
             <SocialSignIn />
+
+            <p className="font-medium text-[1.3rem]">
+                Don&apos;t have an account?{" "}
+                <Link to="register" className="clickable-button">
+                    Sign Up
+                </Link>
+            </p>
         </AuthForm>
     )
 }
