@@ -10,7 +10,7 @@ import bubbles from "../assets/patterns/bubble-pattern.svg"
 
 export default function AuthLayout() {
     return (
-        <section className="h-full flex items-center justify-center relative overflow-hidden">
+        <section className="h-full flex items-center justify-center relative overflow-hidden z-0">
             <section className="h-full flex-1 grid items-center justify-center">
                 <img
                     src={illustration}
@@ -27,34 +27,34 @@ export default function AuthLayout() {
             <img
                 src={vector1}
                 alt="pattern top left"
-                className="absolute -bottom-16 left-0"
+                className="absolute -bottom-16 left-0 -z-10"
             />
             <img
                 src={vector}
                 alt="pattern top almost centered"
-                className="absolute top-0 right-1/2"
+                className="absolute top-0 right-1/2 -z-10"
             />
             <img
                 src={vector2}
                 alt="pattern bottom right"
-                className="absolute bottom-0 right-0"
+                className="absolute bottom-0 right-0 -z-10"
             />
             <img
                 src={vector3}
                 alt="pattern top left"
-                className="absolute top-0 left-0"
+                className="absolute top-0 left-0 -z-10"
             />
 
             {/* Bubbles */}
             <img
                 src={bubbles}
                 alt="bubbles top right"
-                className="absolute -top-10 right-[10%]"
+                className="absolute -top-10 right-[10%] -z-10"
             />
             <img
                 src={bubbles}
                 alt="bubbles bottom center"
-                className="absolute bottom-0 right-1/2"
+                className="absolute bottom-0 right-1/2 -z-10"
             />
         </section>
     )
