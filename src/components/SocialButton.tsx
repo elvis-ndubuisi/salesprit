@@ -10,7 +10,7 @@ export default function SocialButton({
     return (
         <button
             type="button"
-            className="flex items-center justify-center gap-3 border-2 rounded-lg bg-white font-semibold text-base py-3 px-7 capitalize"
+            className="flex items-center justify-center gap-3 border-2 rounded-lg bg-white font-semibold text-base py-3 px-7 capitalize min-w-[150px]"
         >
             {children}
             {socialName}

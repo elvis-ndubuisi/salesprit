@@ -9,12 +9,12 @@ import SocialSignIn from "../components/SocialSignIn"
 export default function ResetPassword() {
     return (
         <AuthForm>
-            <div>
+            <div className="mb-5">
                 <h2 className="opaque-heading">Create new password</h2>
                 <h1 className="auth-heading">reset password</h1>
             </div>
 
-            <fieldset>
+            <fieldset className="flex flex-col gap-5 mb-4">
                 <Input
                     type="password"
                     name="password"
@@ -40,8 +40,11 @@ export default function ResetPassword() {
 
             <SocialSignIn />
 
-            <p className="font-medium text-[1.3rem]">
-                Remembered your password? <Link to="*">login</Link>
+            <p className="font-medium text-[1.1rem] text-center">
+                Remembered your password?{" "}
+                <Link to="login" className="linkable-button">
+                    login
+                </Link>
             </p>
         </AuthForm>
     )

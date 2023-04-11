@@ -9,12 +9,12 @@ import SocialSignIn from "../components/SocialSignIn"
 export default function ForgetPassword() {
     return (
         <AuthForm>
-            <div>
+            <div className="mb-5">
                 <h2 className="opaque-heading">forget your password</h2>
                 <h1 className="auth-heading">forget password</h1>
             </div>
 
-            <fieldset>
+            <fieldset className="flex flex-col gap-5 mb-4">
                 <Input
                     type="text"
                     placeholder="email address"
@@ -31,9 +31,9 @@ export default function ForgetPassword() {
 
             <SocialSignIn />
 
-            <p className="font-medium text-[1.3rem]">
+            <p className="font-medium text-[1.1rem] text-center">
                 Remembered your password?{" "}
-                <Link to="login" className="clickable-button">
+                <Link to="login" className="linkable-button">
                     Login
                 </Link>
             </p>

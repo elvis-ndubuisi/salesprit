@@ -8,12 +8,12 @@ import Button from "../components/Button"
 export default function SignUp() {
     return (
         <AuthForm>
-            <div>
+            <div className="mb-5">
                 <h2 className="opaque-heading">Create new account</h2>
                 <h1 className="auth-heading">Registration</h1>
             </div>
 
-            <fieldset>
+            <fieldset className="flex flex-col gap-5 mb-4">
                 <Input
                     type="text"
                     name="email"
@@ -41,10 +41,23 @@ export default function SignUp() {
                     <LockIcon />
                 </Input>
 
-                <p className="font-medium text-[1.3rem]">
+                <p className="font-medium text-[1.1rem] text-left">
                     By signing below, you agree to the{" "}
-                    <Link to="*">Terms of use</Link> and{" "}
-                    <Link to="*">privacy notice</Link>
+                    <Link
+                        to="*"
+                        title="Redirects to 404 page"
+                        className="linkable-button"
+                    >
+                        Terms of use
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                        to="*"
+                        title="Redirects to 404 page"
+                        className="linkable-button"
+                    >
+                        privacy notice
+                    </Link>
                 </p>
             </fieldset>
 
@@ -52,9 +65,9 @@ export default function SignUp() {
                 sign up
             </Button>
 
-            <p className="font-medium text-[1.3rem]">
+            <p className="font-medium text-[1.1rem] text-center">
                 Already have an account?{" "}
-                <Link to="login" className="clickable-button">
+                <Link to="login" className="linkable-button">
                     Login
                 </Link>
             </p>

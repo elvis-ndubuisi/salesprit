@@ -12,12 +12,12 @@
 
 @layer components {
     .opaque-heading {
-        @apply text-sl-grey text-[1.33rem];
+        @apply text-sl-grey text-[1.3rem];
     }
     .auth-heading {
         @apply font-bold capitalize text-[2.5rem] my-1;
     }
     .linkable-button {
-        @apply font-semibold capitalize text-[1.3rem] text-sl-primary cursor-pointer;
+        @apply font-semibold capitalize text-[1.1rem] text-sl-primary cursor-pointer;
     }
 }
