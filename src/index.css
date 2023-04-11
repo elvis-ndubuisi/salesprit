@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,9 @@
 
 @layer components {
     .opaque-heading {
-        @apply text-base text-sl-grey text-[1.375rem];
+        @apply text-sl-grey text-[1.33rem];
+    }
+    .auth-heading {
+        @apply font-bold capitalize text-[2.5rem] my-1;
     }
 }
