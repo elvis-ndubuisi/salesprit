@@ -1,32 +1,45 @@
+import { Link } from "react-router-dom"
+
 import Button from "../components/Button"
-import AuthH1 from "../components/AuthH1"
 import Input from "../components/Input"
 import AuthForm from "../components/AuthForm"
 import { LockIcon, AtIcon } from "../components/Icons"
-import SocialSignin from "../components/SocialSignin"
+import SocialSignIn from "../components/SocialSignIn"
 
 export default function Login() {
     return (
         <AuthForm>
-            <div className="mb-14">
+            <div className="mb-5">
                 <h2 className="opaque-heading">Login to your account</h2>
-                <AuthH1>Welcome back</AuthH1>
+                <h1 className="auth-heading">Welcome back</h1>
             </div>
 
-            <Input
-                type="text"
-                placeholder="placeholder"
-                name="name"
-                handleChange={() => {}}
-            >
-                <LockIcon />
-            </Input>
+            <fieldset>
+                <Input
+                    type="text"
+                    placeholder="Email address"
+                    name="name"
+                    handleChange={() => {}}
+                >
+                    <AtIcon />
+                </Input>
 
-            <SocialSignin />
+                <Input
+                    type="text"
+                    placeholder="password"
+                    name="password"
+                    handleChange={() => {}}
+                >
+                    <LockIcon />
+                </Input>
+                <Link to="/forget-password">forget password?</Link>
+            </fieldset>
 
-            <Button isPrimary={false} handleClick={() => {}}>
+            <Button isPrimary handleClick={() => {}}>
                 login
             </Button>
+
+            <SocialSignIn />
         </AuthForm>
     )
 }

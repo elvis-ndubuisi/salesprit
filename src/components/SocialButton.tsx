@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from "react"
+import { ReactNode } from "react"
 
 export default function SocialButton({
     socialName,
@@ -10,7 +10,7 @@ export default function SocialButton({
     return (
         <button
             type="button"
-            className="flex items-center justify-center gap-3 border-2 rounded-lg bg-white font-semibold text-lg py-[1.125em] px-11 capitalize"
+            className="flex items-center justify-center gap-3 border-2 rounded-lg bg-white font-semibold text-base py-[1.125em] px-11 capitalize"
         >
             {children}
             {socialName}

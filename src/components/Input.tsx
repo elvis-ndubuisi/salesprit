@@ -15,7 +15,7 @@ export default function Input({
     children,
 }: IProps) {
     return (
-        <section className="flex items-center gap-2 py-4 border-b border-sl-stroke">
+        <section className="flex items-center gap-5 pt-2 pb-3 border-b border-sl-stroke">
             {children && children}
             <input
                 type={type}
@@ -23,7 +23,7 @@ export default function Input({
                 id={name}
                 placeholder={placeholder}
                 onChange={handleChange}
-                className="flex-1 placeholder:text-sl-grey capitalize text-lg bg-transparent outline-none"
+                className="flex-1 placeholder:text-sl-grey capitalize text-base bg-transparent outline-none text-sl-grey"
             />
         </section>
     )
