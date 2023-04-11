@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 import SocialButton from "./SocialButton"
 import { GoogleIcon, FacebookIcon } from "./Icons"
 
