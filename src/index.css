@@ -17,4 +17,7 @@
     .auth-heading {
         @apply font-bold capitalize text-[2.5rem] my-1;
     }
+    .linkable-button {
+        @apply font-semibold capitalize text-[1.3rem] text-sl-primary cursor-pointer;
+    }
 }
