@@ -34,19 +34,19 @@ const router = createBrowserRouter([
                 // },
                 children: [
                     { index: true, element: <Main /> },
-                    { path: "pos/dashboard", element: <Dashboard /> },
-                    { path: "pos/order", element: <Order /> },
-                    { path: "pos/product", element: <Product /> },
+                    { path: "dashboard", element: <Dashboard /> },
+                    { path: "order", element: <Order /> },
+                    { path: "product", element: <Product /> },
                     {
-                        path: "pos/notification",
+                        path: "notification",
                         element: <Notification />,
                     },
                     {
-                        path: "pos/customers",
+                        path: "customers",
                         element: <Customers />,
                     },
-                    { path: "pos/message", element: <Message /> },
-                    { path: "pos/setting", element: <Setting /> },
+                    { path: "message", element: <Message /> },
+                    { path: "setting", element: <Setting /> },
                 ],
             },
             {

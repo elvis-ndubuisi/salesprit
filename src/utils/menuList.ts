@@ -8,42 +8,42 @@ const menuList: Menu[] = [
     {
         title: "home",
         icon: "icon",
-        uri: "pos/",
+        uri: "/pos",
     },
     {
         title: "dashboard",
         icon: "icon",
-        uri: "pos/dashboard",
+        uri: "dashboard",
     },
     {
         title: "order",
         icon: "icon",
-        uri: "pos/order",
+        uri: "order",
     },
     {
         title: "product",
         icon: "icon",
-        uri: "pos/product",
+        uri: "product",
     },
     {
         title: "notification",
         icon: "icon",
-        uri: "pos/notification",
+        uri: "notification",
     },
     {
         title: "customers",
         icon: "icon",
-        uri: "pos/customers",
+        uri: "customers",
     },
     {
         title: "message",
         icon: "icon",
-        uri: "pos/message",
+        uri: "message",
     },
     {
         title: "setting",
         icon: "icon",
-        uri: "pos/setting",
+        uri: "setting",
     },
 ]
 
