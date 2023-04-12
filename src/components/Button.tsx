@@ -1,4 +1,7 @@
 import { PropsWithChildren } from "react"
+import { Link } from "react-router-dom"
+
+import { Menu } from "../utils/menuList"
 
 interface IProps extends PropsWithChildren {
     isPrimary: boolean
@@ -16,5 +19,14 @@ export default function Button({ isPrimary, children, handleClick }: IProps) {
         >
             {children}
         </button>
+    )
+}
+
+export function MenuButton({ icon, title, uri }: Menu) {
+    return (
+        <Link to={uri} className="">
+            {icon}
+            {title}
+        </Link>
     )
 }
