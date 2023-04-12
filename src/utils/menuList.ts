@@ -1,13 +1,20 @@
+import { ReactNode } from "react"
+import { BsFillGridFill } from "react-icons/bs"
+import { HiHome } from "react-icons/hi2"
+import { MdNotifications } from "react-icons/md"
+import { FaUserAlt } from "react-icons/fa"
+import { IoSend, IoSettings } from "react-icons/io5"
+
 export type Menu = {
     title: string
-    icon: string
+    icon: () => ReactNode
     uri: string
 }
 
 const menuList: Menu[] = [
     {
         title: "home",
-        icon: "icon",
+        icon: "",
         uri: "/pos",
     },
     {
