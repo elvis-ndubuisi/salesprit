@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import { Menu } from "../utils/menuList"
 
 interface IProps extends PropsWithChildren {
     isPrimary: boolean
-    handleClick: () => void
+    handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export default function Button({ isPrimary, children, handleClick }: IProps) {
@@ -24,9 +24,18 @@ export default function Button({ isPrimary, children, handleClick }: IProps) {
 
 export function MenuButton({ icon, title, uri }: Menu) {
     return (
-        <Link to={uri} className="">
-            {icon}
+        <NavLink
+            to={uri}
+            className={({ isActive, isPending }) =>
+                // eslint-disable-next-line no-nested-ternary
+                isActive
+                    ? "px-3 py-2 rounded-md flex items-center bg-sl-secondary/10 text-sl-secondary font-medium text-lg capitalize"
+                    : isPending
+                    ? "px-3 py-2 rounded-md flex items-center bg-sl-secondary/10 text-sl-grey font-medium text-lg capitalize"
+                    : "px-3 py-2 rounded-md flex items-center text-sl-grey opacity-60 font-medium text-lg capitalize"
+            }
+        >
             {title}
-        </Link>
+        </NavLink>
     )
 }
