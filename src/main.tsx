@@ -12,6 +12,14 @@ import SignUp from "./screens/SignUp"
 import ForgetPassword from "./screens/ForgetPassword"
 import ResetPassword from "./screens/ResetPassword"
 import PasswordChanged from "./screens/PasswordChanged"
+import Main from "./screens/Main"
+import Dashboard from "./screens/Dashboard"
+import Order from "./screens/Order"
+import Product from "./screens/Product"
+import Notification from "./screens/Notification"
+import Customers from "./screens/Customers"
+import Message from "./screens/Message"
+import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
     {
@@ -19,25 +27,26 @@ const router = createBrowserRouter([
         element: <AppLayout />,
         children: [
             {
+                path: "pos",
                 element: <PosLayout />,
                 // loader: async (params: any) => {
                 //     console.log(params)
                 // },
                 children: [
-                    { path: "pos", element: <Splash /> },
-                    { path: "pos/dashboard", element: <div>dashboard</div> },
-                    { path: "pos/order", element: <div>order</div> },
-                    { path: "pos/product", element: <div>product</div> },
+                    { index: true, element: <Main /> },
+                    { path: "pos/dashboard", element: <Dashboard /> },
+                    { path: "pos/order", element: <Order /> },
+                    { path: "pos/product", element: <Product /> },
                     {
                         path: "pos/notification",
-                        element: <div>notification</div>,
+                        element: <Notification />,
                     },
                     {
                         path: "pos/customers",
-                        element: <div>customers</div>,
+                        element: <Customers />,
                     },
-                    { path: "pos/message", element: <div>message</div> },
-                    { path: "pos/setting", element: <div>setting</div> },
+                    { path: "pos/message", element: <Message /> },
+                    { path: "pos/setting", element: <Setting /> },
                 ],
             },
             {
