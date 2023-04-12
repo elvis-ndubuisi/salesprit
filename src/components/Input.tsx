@@ -4,7 +4,7 @@ interface IProps extends PropsWithChildren {
     type: string
     name: string
     placeholder: string
-    handleChange: () => void
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export default function Input({
