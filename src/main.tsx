@@ -23,7 +23,22 @@ const router = createBrowserRouter([
                 // loader: async (params: any) => {
                 //     console.log(params)
                 // },
-                children: [{ path: "pos", element: <Splash /> }],
+                children: [
+                    { path: "pos", element: <Splash /> },
+                    { path: "pos/dashboard", element: <div>dashboard</div> },
+                    { path: "pos/order", element: <div>order</div> },
+                    { path: "pos/product", element: <div>product</div> },
+                    {
+                        path: "pos/notification",
+                        element: <div>notification</div>,
+                    },
+                    {
+                        path: "pos/customers",
+                        element: <div>customers</div>,
+                    },
+                    { path: "pos/message", element: <div>message</div> },
+                    { path: "pos/setting", element: <div>setting</div> },
+                ],
             },
             {
                 element: <AuthLayout />,
