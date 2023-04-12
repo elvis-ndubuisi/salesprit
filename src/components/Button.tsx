@@ -1,19 +1,28 @@
 import { PropsWithChildren } from "react"
 import { NavLink } from "react-router-dom"
+import { FaBell } from "react-icons/fa"
 
 import { Menu } from "../utils/menuList"
 
 interface IProps extends PropsWithChildren {
     isPrimary: boolean
     handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+    isBold?: boolean
 }
 
-export default function Button({ isPrimary, children, handleClick }: IProps) {
+export default function Button({
+    isPrimary,
+    children,
+    handleClick,
+    isBold = true,
+}: IProps) {
     return (
         <button
             type="button"
             onClick={handleClick}
-            className={`text-center font-semibold text-lg rounded-lg py-3 px-7 capitalize text-white ${
+            className={`text-center ${
+                isBold ? "font-semibold" : "font-medium"
+            } text-lg rounded-lg py-3 px-7 capitalize text-white ${
                 isPrimary ? "bg-sl-secondary" : "bg-sl-primary"
             }`}
         >
@@ -40,8 +49,13 @@ export function MenuButton({ icon, title, uri }: Menu) {
     )
 }
 
+// TODO: Add glow filter to button
 export function NotificationButton() {
-    return <button type="button">icon</button>
+    return (
+        <button type="button" className="p-3 rounded-full bg-sl-secondary">
+            <FaBell style={{ color: "white" }} size={18} />
+        </button>
+    )
 }
 
 type QrProp = {
