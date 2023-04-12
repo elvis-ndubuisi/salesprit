@@ -7,8 +7,8 @@ import menuList from "../utils/menuList"
 // TODO: Fixes pos index route nav active state
 export default function PosLayout() {
     return (
-        <section className="h-full grid grid-cols-[200px_minmax(300px,_1fr)_min(350px)]">
-            <section className="flex flex-col gap-4 border-r-2 border-sl-stroke mt-5">
+        <section className="grid grid-cols-[200px_minmax(300px,_1fr)_min(350px)]">
+            <section className="max-h-screen flex flex-col gap-4 border-r-2 border-sl-stroke pt-5">
                 <Link to="/pos">
                     <img
                         src={logo}
