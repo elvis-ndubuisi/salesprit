@@ -3,7 +3,7 @@ import { GoKebabVertical } from "react-icons/go"
 export default function Dashboard() {
     return (
         <section className="col-span-2 h-screen px-5">
-            <h2 className="section-heading h-[5%]">manager dashboard</h2>
+            <h2 className="section-heading mt-5">manager dashboard</h2>
 
             <section className="h-[95%] w-full py-4 grid grid-cols-3 gap-3">
                 <section className="p-3 rounded-lg shadow-xl">

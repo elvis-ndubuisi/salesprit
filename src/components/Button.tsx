@@ -21,8 +21,10 @@ export default function Button({
             type="button"
             onClick={handleClick}
             className={`text-center ${
-                isBold ? "font-semibold" : "font-medium"
-            } text-lg rounded-lg py-3 px-7 capitalize text-white ${
+                isBold
+                    ? "font-semibold text-lg py-3 px-7"
+                    : "font-medium text-base py-2 px-3"
+            }  rounded-lg   capitalize text-white ${
                 isPrimary ? "bg-sl-secondary" : "bg-sl-primary"
             }`}
         >
