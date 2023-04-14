@@ -51,11 +51,15 @@ const router = createBrowserRouter([
                         path: "setting",
                         element: <SettingsLayout />,
                         children: [
+                            { index: true, element: <div>personal info</div> },
+                            {
+                                path: "info",
+                                element: <div>personal info</div>,
+                            },
                             {
                                 path: "add-employee",
                                 element: <div>add employee</div>,
                             },
-                            { path: "info", element: <div>personal info</div> },
                             {
                                 path: "select",
                                 element: <div>select employee</div>,
@@ -69,7 +73,7 @@ const router = createBrowserRouter([
                                 element: <div>login and password</div>,
                             },
                             {
-                                path: "languate-region",
+                                path: "language-region",
                                 element: <div>language and region</div>,
                             },
                         ],

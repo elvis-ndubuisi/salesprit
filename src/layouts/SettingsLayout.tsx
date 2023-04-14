@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 
 export default function SettingsLayout() {
     return (
@@ -16,14 +16,22 @@ export default function SettingsLayout() {
 
                     <hr className="border-2 border-sl-stroke" />
 
-                    <nav>links goes here</nav>
+                    <nav className="flex flex-col">
+                        <NavLink to="info">personal information</NavLink>
+                        <NavLink to="">employees management</NavLink>
+                        <NavLink to="opening-hours">opening hours</NavLink>
+                        <NavLink to="login-password">login & password</NavLink>
+                        <NavLink to="language-region">
+                            language & region
+                        </NavLink>
+                    </nav>
 
                     <button className="linkable-button" type="button">
                         logout
                     </button>
                 </section>
 
-                <section className="bg-black">
+                <section>
                     <Outlet />
                 </section>
             </section>
