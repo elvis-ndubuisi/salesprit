@@ -4,7 +4,6 @@ import NotificationCard from "../components/NotificationCard"
 import notifications from "../utils/notifications"
 import { Notification as NotificationType } from "../types/Notifications"
 
-// TODO: Add mark-all-as-read effect: text-grey
 export default function Notification() {
     const [notificationArr, setNotificationArr] =
         React.useState<Omit<NotificationType, "handleClick">[]>(notifications)
