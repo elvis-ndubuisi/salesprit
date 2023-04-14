@@ -6,6 +6,7 @@ import "./index.css"
 import AppLayout from "./layouts/AppLayout"
 import PosLayout from "./layouts/PosLayout"
 import AuthLayout from "./layouts/AuthLayout"
+import SettingsLayout from "./layouts/SettingsLayout"
 import Splash from "./screens/Splash"
 import Login from "./screens/Login"
 import SignUp from "./screens/SignUp"
@@ -46,7 +47,33 @@ const router = createBrowserRouter([
                         element: <Customers />,
                     },
                     { path: "message", element: <Message /> },
-                    { path: "setting", element: <Setting /> },
+                    {
+                        path: "setting",
+                        element: <SettingsLayout />,
+                        children: [
+                            {
+                                path: "add-employee",
+                                element: <div>add employee</div>,
+                            },
+                            { path: "info", element: <div>personal info</div> },
+                            {
+                                path: "select",
+                                element: <div>select employee</div>,
+                            },
+                            {
+                                path: "opening-hours",
+                                element: <div>opening hours</div>,
+                            },
+                            {
+                                path: "login-password",
+                                element: <div>login and password</div>,
+                            },
+                            {
+                                path: "languate-region",
+                                element: <div>language and region</div>,
+                            },
+                        ],
+                    },
                 ],
             },
             {
