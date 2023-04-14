@@ -5,7 +5,11 @@ import notificationIcon from "../assets/icons/notification-bell.svg"
 export default function NotificationCard() {
     return (
         <section className="flex items-start justify-between gap-3 p-3 hover:opacity-80">
-            <img src={notificationIcon} alt="notification bell" />
+            <img
+                src={notificationIcon}
+                alt="notification bell"
+                className="w-11 h-11 object-contain"
+            />
             <div className="flex-1 flex flex-col gap-3 pr-3 text-lg">
                 <p className="font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
