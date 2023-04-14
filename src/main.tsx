@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import "./index.css"
-import AppLayout from "./layouts/AppLayout"
+import AppLayout, { appLoader } from "./layouts/AppLayout"
 import PosLayout from "./layouts/PosLayout"
 import AuthLayout from "./layouts/AuthLayout"
 import SettingsLayout from "./layouts/SettingsLayout"
+import MessageLayout from "./layouts/MessageLayout"
 import Splash from "./screens/Splash"
 import Login from "./screens/Login"
 import SignUp from "./screens/SignUp"
@@ -19,20 +20,19 @@ import Order from "./screens/Order"
 import Product from "./screens/Product"
 import Notification from "./screens/Notification"
 import Customers from "./screens/Customers"
-import Message from "./screens/Message"
+import Message, { messageLoader } from "./screens/Message"
+import PersonalInfo from "./screens/settings/PersonalInfo"
 import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout />,
+        loader: appLoader,
         children: [
             {
                 path: "pos",
                 element: <PosLayout />,
-                // loader: async (params: any) => {
-                //     console.log(params)
-                // },
                 children: [
                     { index: true, element: <Main /> },
                     { path: "dashboard", element: <Dashboard /> },
@@ -46,16 +46,23 @@ const router = createBrowserRouter([
                         path: "customers",
                         element: <Customers />,
                     },
-                    { path: "message", element: <Message /> },
+                    {
+                        path: "message",
+                        element: <MessageLayout />,
+                        children: [
+                            {
+                                path: ":id",
+                                element: <Message />,
+                                loader: messageLoader,
+                            },
+                        ],
+                    },
                     {
                         path: "setting",
                         element: <SettingsLayout />,
                         children: [
-                            { index: true, element: <div>personal info</div> },
-                            {
-                                path: "info",
-                                element: <div>personal info</div>,
-                            },
+                            { index: true, element: <PersonalInfo /> },
+                            { path: "info", element: <PersonalInfo /> },
                             {
                                 path: "add-employee",
                                 element: <div>add employee</div>,
