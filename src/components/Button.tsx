@@ -40,13 +40,18 @@ export function MenuButton({ icon, title, uri }: Menu) {
             className={({ isActive, isPending }) =>
                 // eslint-disable-next-line no-nested-ternary
                 isActive
-                    ? "px-3 py-2 rounded-md flex items-center bg-sl-secondary/10 text-sl-secondary font-medium text-lg capitalize"
+                    ? "px-3 py-2 rounded-md flex gap-3 items-center bg-sl-secondary/10 text-sl-secondary font-medium text-lg capitalize"
                     : isPending
-                    ? "px-3 py-2 rounded-md flex items-center bg-sl-secondary/10 text-sl-grey font-medium text-lg capitalize"
-                    : "px-3 py-2 rounded-md flex items-center text-sl-grey opacity-60 font-medium text-lg capitalize"
+                    ? "px-3 py-2 rounded-md flex gap-3 items-center bg-sl-secondary/10 text-sl-grey font-medium text-lg capitalize"
+                    : "px-3 py-2 rounded-md flex gap-3 items-center text-sl-grey opacity-50 font-medium text-lg capitalize"
             }
         >
-            {title}
+            <img
+                src={icon}
+                alt="menu icon"
+                className="w-6 h-6 object-contain"
+            />
+            <p>{title}</p>
         </NavLink>
     )
 }

@@ -1,55 +1,57 @@
-import { ReactNode } from "react"
-import { BsFillGridFill } from "react-icons/bs"
-import { HiHome } from "react-icons/hi2"
-import { MdNotifications } from "react-icons/md"
-import { FaUserAlt } from "react-icons/fa"
-import { IoSend, IoSettings } from "react-icons/io5"
+import homeIcon from "../assets/icons/home.svg"
+import dashboardIcon from "../assets/icons/dashboard.svg"
+import orderIcon from "../assets/icons/order.svg"
+import productIcon from "../assets/icons/product.svg"
+import notificationIcon from "../assets/icons/notification.svg"
+import customersIcon from "../assets/icons/customer.svg"
+import messageIcon from "../assets/icons/message.svg"
+import settingIcon from "../assets/icons/setting.svg"
 
 export type Menu = {
     title: string
-    icon: () => ReactNode
+    icon: string
     uri: string
 }
 
 const menuList: Menu[] = [
     {
         title: "home",
-        icon: "",
+        icon: homeIcon,
         uri: "/pos/",
     },
     {
         title: "dashboard",
-        icon: "icon",
+        icon: dashboardIcon,
         uri: "dashboard",
     },
     {
         title: "order",
-        icon: "icon",
+        icon: orderIcon,
         uri: "order",
     },
     {
         title: "product",
-        icon: "icon",
+        icon: productIcon,
         uri: "product",
     },
     {
         title: "notification",
-        icon: "icon",
+        icon: notificationIcon,
         uri: "notification",
     },
     {
         title: "customers",
-        icon: "icon",
+        icon: customersIcon,
         uri: "customers",
     },
     {
         title: "message",
-        icon: "icon",
+        icon: messageIcon,
         uri: "message",
     },
     {
         title: "setting",
-        icon: "icon",
+        icon: settingIcon,
         uri: "setting",
     },
 ]
