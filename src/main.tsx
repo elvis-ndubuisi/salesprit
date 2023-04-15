@@ -27,6 +27,7 @@ import PersonalInfo from "./screens/settings/PersonalInfo"
 import OpeningHours from "./screens/settings/OpeningHours"
 import LangRegion from "./screens/settings/LangRegion"
 import EmployeeManagement from "./screens/settings/EmployeeManagement"
+import LoginPassword from "./screens/settings/LoginPassword"
 import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
@@ -42,22 +43,11 @@ const router = createBrowserRouter([
                     { index: true, element: <Main /> },
                     { path: "dashboard", element: <Dashboard /> },
                     { path: "order", element: <Order /> },
-                    {
-                        path: "product",
-                        element: <Product />,
-                        children: [
-                            { path: "add", element: <AddProduct /> },
-                            { path: "edit", element: <EditProduct /> },
-                        ],
-                    },
-                    {
-                        path: "notification",
-                        element: <Notification />,
-                    },
-                    {
-                        path: "customers",
-                        element: <Customers />,
-                    },
+                    { path: "product", element: <Product /> },
+                    { path: "product/add", element: <AddProduct /> },
+                    { path: "product/edit", element: <EditProduct /> },
+                    { path: "notification", element: <Notification /> },
+                    { path: "customers", element: <Customers /> },
                     {
                         path: "message",
                         element: <MessageLayout />,
@@ -85,7 +75,7 @@ const router = createBrowserRouter([
                             },
                             {
                                 path: "login-password",
-                                element: <div>login and password</div>,
+                                element: <LoginPassword />,
                             },
                             {
                                 path: "language-region",
