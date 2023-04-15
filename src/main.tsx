@@ -17,7 +17,9 @@ import PasswordChanged from "./screens/PasswordChanged"
 import Main from "./screens/Main"
 import Dashboard from "./screens/Dashboard"
 import Order from "./screens/Order"
-import Product from "./screens/Product"
+import Product from "./screens/product/Product"
+import AddProduct from "./screens/product/AddProduct"
+import EditProduct from "./screens/product/EditProduct"
 import Notification from "./screens/Notification"
 import Customers from "./screens/Customers"
 import Message, { messageLoader } from "./screens/Message"
@@ -40,7 +42,14 @@ const router = createBrowserRouter([
                     { index: true, element: <Main /> },
                     { path: "dashboard", element: <Dashboard /> },
                     { path: "order", element: <Order /> },
-                    { path: "product", element: <Product /> },
+                    {
+                        path: "product",
+                        element: <Product />,
+                        children: [
+                            { path: "add", element: <AddProduct /> },
+                            { path: "edit", element: <EditProduct /> },
+                        ],
+                    },
                     {
                         path: "notification",
                         element: <Notification />,
