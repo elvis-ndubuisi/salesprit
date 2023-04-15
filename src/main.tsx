@@ -24,6 +24,7 @@ import Message, { messageLoader } from "./screens/Message"
 import PersonalInfo from "./screens/settings/PersonalInfo"
 import OpeningHours from "./screens/settings/OpeningHours"
 import LangRegion from "./screens/settings/LangRegion"
+import EmployeeManagement from "./screens/settings/EmployeeManagement"
 import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
@@ -67,11 +68,7 @@ const router = createBrowserRouter([
                             { path: "info", element: <PersonalInfo /> },
                             {
                                 path: "employee",
-                                element: <div>add employee</div>,
-                            },
-                            {
-                                path: "select",
-                                element: <div>select employee</div>,
+                                element: <EmployeeManagement />,
                             },
                             {
                                 path: "opening-hours",
