@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom"
+import { IoMdSend } from "react-icons/io"
 
 import { ChatHeader, ChatBubbleFrom, ChatBubbleTo } from "../components/Chat"
 import chats from "../utils/chats"
+import emojiIcon from "../assets/icons/emoji.svg"
 
 export default function Message() {
     const { name, id, section } = useLoaderData()
@@ -33,9 +35,9 @@ export default function Message() {
             <footer className="absolute bottom-4 left-0 w-full flex item-center justify-between gap-4 border-2 border-sl-stroke h-16 p-1 rounded-full bg-white">
                 <button
                     type="button"
-                    className="h-[70%] rounded-full aspect-square my-auto bg-black"
+                    className="h-[70%] rounded-full aspect-square my-auto bg-sl-stroke grid place-content-center"
                 >
-                    emji
+                    <img src={emojiIcon} alt="emoji" />
                 </button>
                 <input
                     type="text"
@@ -44,9 +46,9 @@ export default function Message() {
                 />
                 <button
                     type="submit"
-                    className="h-full aspect-square rounded-full overflow-hidden bg-sl-primary"
+                    className="h-full aspect-square rounded-full overflow-hidden bg-sl-primary text-white grid place-content-center"
                 >
-                    send
+                    <IoMdSend size={24} />
                 </button>
             </footer>
         </aside>

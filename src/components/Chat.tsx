@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react"
 import { Link } from "react-router-dom"
+import { HiPhone, HiVideoCamera } from "react-icons/hi2"
 
 type ChatProp = {
     path: string
@@ -35,8 +36,18 @@ export function ChatHeader({ name }: { name: string }) {
                 <p className="capitalize font-bold text-lg">{name}</p>
             </section>
             <section className="flex items-center gap-3">
-                <button type="button">btn</button>
-                <button type="button">btn</button>
+                <button
+                    type="button"
+                    className="bg-green-500 text-white p-3 rounded-full"
+                >
+                    <HiPhone size={24} />
+                </button>
+                <button
+                    type="button"
+                    className="bg-sl-primary text-white p-3 rounded-full"
+                >
+                    <HiVideoCamera size={24} />
+                </button>
             </section>
         </header>
     )
