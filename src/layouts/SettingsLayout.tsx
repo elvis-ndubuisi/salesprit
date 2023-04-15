@@ -29,7 +29,7 @@ export default function SettingsLayout() {
                         </h4>
                     </div>
 
-                    <nav className="flex flex-col w-full">
+                    <nav className="flex flex-col w-full gap-2">
                         <NavLink
                             to="info"
                             className={({ isActive }) =>
