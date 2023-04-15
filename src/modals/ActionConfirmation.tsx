@@ -1,4 +1,5 @@
 import Button from "../components/Button"
+import exclamationIcon from "../assets/icons/exclamation.svg"
 
 type Props = {
     confirm: () => void
@@ -24,7 +25,7 @@ export default function ActionConfirmation({
             : ""
     return (
         <section className="flex flex-col items-center rounded-lg">
-            <img src="" alt="confirmation alert" />
+            <img src={exclamationIcon} alt="confirmation alert" />
             <h3>{alertTitle} ?</h3>
             <p>{alertWarning} ?</p>
 
