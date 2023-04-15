@@ -22,6 +22,8 @@ import Notification from "./screens/Notification"
 import Customers from "./screens/Customers"
 import Message, { messageLoader } from "./screens/Message"
 import PersonalInfo from "./screens/settings/PersonalInfo"
+import OpeningHours from "./screens/settings/OpeningHours"
+import LangRegion from "./screens/settings/LangRegion"
 import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
@@ -64,7 +66,7 @@ const router = createBrowserRouter([
                             { index: true, element: <PersonalInfo /> },
                             { path: "info", element: <PersonalInfo /> },
                             {
-                                path: "add-employee",
+                                path: "employee",
                                 element: <div>add employee</div>,
                             },
                             {
@@ -73,7 +75,7 @@ const router = createBrowserRouter([
                             },
                             {
                                 path: "opening-hours",
-                                element: <div>opening hours</div>,
+                                element: <OpeningHours />,
                             },
                             {
                                 path: "login-password",
@@ -81,7 +83,7 @@ const router = createBrowserRouter([
                             },
                             {
                                 path: "language-region",
-                                element: <div>language and region</div>,
+                                element: <LangRegion />,
                             },
                         ],
                     },

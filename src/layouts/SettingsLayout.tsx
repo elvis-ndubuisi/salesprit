@@ -42,7 +42,7 @@ export default function SettingsLayout() {
                             <HiChevronRight size={20} />
                         </NavLink>
                         <NavLink
-                            to=""
+                            to="employee"
                             className={({ isActive }) =>
                                 isActive
                                     ? "flex items-center justify-between text-sl-primary font-medium text-lg capitalize"
