@@ -15,10 +15,25 @@ A fullstack Point-Of-Sales web app with elegant UI, well structured user experie
 
 ## Notes
 
--   App first loads `/` route with the `Splash` screen on display (via React Suspense).
--   While still displaying the `Splash` screen, app checks if User is logged in.
--   If logged in, user is redirected to the protected `/pos` route which displays the content.
--   If user is not logged in, user is redirected to `Login` screen from which they can register.
+-   key notes
+
+## Authentication & Authorization Flow
+
+-   **When a user first loads the app i.e `AppLayout`**
+
+    -   Root `loader` sends a request to fetch user profile using information provided inside the credentials. This if only possible is user had previously logged in.
+    -   App component displays `Splash` screen while it awaits response from server.
+    -   If response comes with the user's credentials, the `Auth state` is set and the `<Outlet` is used to load the pages.
+    -   If an Authentication error occurs, the user is navigated to the `Login` page.
+
+-   **Pos Page**
+    All routes not related to login and authentication are private
+
+-   **When user logs in, registers or logs out**
+
+    -   When a user logs-in or registers, the `auth state` is set and user gets `redirected` to the private `home` page which required the `auth state` in order to be accessed.
+
+    -   When a user logs-out, the `auth state` is set to replect changes and user is redirected to the `Login` route.
 
 ## UI Designed By
 
