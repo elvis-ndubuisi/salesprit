@@ -1,17 +1,28 @@
-import { Outlet, useLoaderData } from "react-router-dom"
+import React from "react"
+import { Outlet, useLoaderData, defer, Await } from "react-router-dom"
+
+import Splash from "../screens/Splash"
+import sleep from "../utils/sleep"
 
 export default function AppLayout() {
-    const loaderData = useLoaderData()
-
-    console.log(loaderData)
+    const { data } = useLoaderData()
+    console.log(data)
 
     return (
         <main className="w-screen h-screen max-w-[1366px] max-h-[1024px] bg-white">
-            <Outlet />
+            <React.Suspense fallback={<Splash />}>
+                <Await resolve={data} errorElement={<div>error in await</div>}>
+                    {(d) => <Outlet />}
+                </Await>
+            </React.Suspense>
         </main>
     )
 }
 
-export function appLoader() {
-    return { app: "shop", user: "me" }
+async function getme() {
+    await sleep(6000)
+    return { auth: true, name: "el" }
+}
+export async function appLoader() {
+    return defer({ data: getme() })
 }

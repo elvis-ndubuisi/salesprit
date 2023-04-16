@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         loader: appLoader,
         children: [
             {
-                path: "pos",
+                path: "/",
                 element: <PosLayout />,
                 children: [
                     { index: true, element: <Main /> },

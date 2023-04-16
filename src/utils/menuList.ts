@@ -17,7 +17,7 @@ const menuList: Menu[] = [
     {
         title: "home",
         icon: homeIcon,
-        uri: "/pos/",
+        uri: "/",
     },
     {
         title: "dashboard",
