@@ -28,3 +28,18 @@ export default function Input({
         </section>
     )
 }
+
+interface SProps extends Omit<IProps, "type" | "children"> {
+    id: string
+}
+export function SettingInput({ handleChange, name, placeholder, id }: SProps) {
+    return (
+        <input
+            type="text"
+            placeholder={placeholder}
+            name={name}
+            id={id}
+            onChange={handleChange}
+        />
+    )
+}
