@@ -13,11 +13,11 @@ type Props = {
 }
 
 export default function PersonalInfo() {
-    const [profile, setProfile] = React.useState({
+    const [profile, setProfile] = React.useState<Props>({
         firstname: "Aguaero",
         lastname: "anaak",
         email: "arguero@fakemeil.com",
-        mobile: "+9934853002",
+        mobile: +9934853002,
         position: "head cashier",
         dob: "23/04/20234",
     })
@@ -77,11 +77,11 @@ export default function PersonalInfo() {
 
                     <SettingInput
                         name="number"
-                        placeholder={profile.mobile}
+                        placeholder={`${profile.mobile}`}
                         handleChange={(event) =>
                             setProfile((prev) => ({
                                 ...prev,
-                                mobile: event.target.value,
+                                mobile: +event.target.value,
                             }))
                         }
                     />

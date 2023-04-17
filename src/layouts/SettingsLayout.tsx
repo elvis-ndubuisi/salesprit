@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom"
+import { Outlet, NavLink, redirect } from "react-router-dom"
 import { HiChevronRight, HiPencil } from "react-icons/hi2"
 
 export default function SettingsLayout() {
@@ -31,7 +31,7 @@ export default function SettingsLayout() {
 
                     <nav className="flex flex-col w-full gap-2">
                         <NavLink
-                            to="info"
+                            to="/setting/"
                             className={({ isActive }) =>
                                 isActive
                                     ? "flex items-center justify-between text-sl-primary font-medium text-lg capitalize"
@@ -87,7 +87,13 @@ export default function SettingsLayout() {
                         </NavLink>
                     </nav>
 
-                    <button className="linkable-button" type="button">
+                    <button
+                        className="linkable-button"
+                        type="button"
+                        onClick={() => {
+                            alert("redirect to login")
+                        }}
+                    >
                         logout
                     </button>
                 </section>

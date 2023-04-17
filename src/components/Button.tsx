@@ -57,9 +57,17 @@ export function MenuButton({ icon, title, uri }: Menu) {
 }
 
 // TODO: Add glow filter to button
-export function NotificationButton() {
+export function NotificationButton({
+    handleClick,
+}: {
+    handleClick: () => void
+}) {
     return (
-        <button type="button" className="p-3 rounded-full bg-sl-secondary">
+        <button
+            type="button"
+            className="p-3 rounded-full bg-sl-secondary"
+            onClick={handleClick}
+        >
             <FaBell style={{ color: "white" }} size={18} />
         </button>
     )
