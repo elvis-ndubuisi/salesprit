@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Provider } from "react-redux"
+import { store } from "./redux/store"
 
 import "./index.css"
 import AppLayout, { appLoader } from "./layouts/AppLayout"
@@ -8,7 +10,6 @@ import PosLayout from "./layouts/PosLayout"
 import AuthLayout from "./layouts/AuthLayout"
 import SettingsLayout from "./layouts/SettingsLayout"
 import MessageLayout from "./layouts/MessageLayout"
-import Splash from "./screens/Splash"
 import Login from "./screens/Login"
 import SignUp from "./screens/SignUp"
 import ForgetPassword from "./screens/ForgetPassword"
@@ -22,13 +23,12 @@ import AddProduct from "./screens/product/AddProduct"
 import EditProduct from "./screens/product/EditProduct"
 import Notification from "./screens/Notification"
 import Customers from "./screens/Customers"
-import Message, { messageLoader } from "./screens/Message"
+import Message from "./screens/Message"
 import PersonalInfo from "./screens/settings/PersonalInfo"
 import OpeningHours from "./screens/settings/OpeningHours"
 import LangRegion from "./screens/settings/LangRegion"
 import EmployeeManagement from "./screens/settings/EmployeeManagement"
 import LoginPassword from "./screens/settings/LoginPassword"
-import Setting from "./screens/Setting"
 
 const router = createBrowserRouter([
     {
@@ -55,7 +55,6 @@ const router = createBrowserRouter([
                             {
                                 path: ":id",
                                 element: <Message />,
-                                loader: messageLoader,
                             },
                         ],
                     },
@@ -92,7 +91,6 @@ const router = createBrowserRouter([
                     { path: "register", element: <SignUp /> },
                     { path: "forget-password", element: <ForgetPassword /> },
                     { path: "reset-password", element: <ResetPassword /> },
-                    { path: "logout", element: <div>log out elem</div> },
                 ],
             },
         ],
@@ -101,6 +99,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+            <RouterProvider router={router} />
+        </Provider>
     </React.StrictMode>
 )

@@ -5,7 +5,6 @@ import OrderedProduct from "../components/OrderedProduct"
 import PriceSummary from "../components/PriceSummary"
 import ProductCard from "../components/ProductCard"
 
-// TODO: handle overflow on OrderedProduct section.
 export default function Main() {
     return (
         <>
