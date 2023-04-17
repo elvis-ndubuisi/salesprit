@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, useId } from "react"
 
 interface IProps extends PropsWithChildren {
     type: string
@@ -29,17 +29,25 @@ export default function Input({
     )
 }
 
-interface SProps extends Omit<IProps, "type" | "children"> {
-    id: string
-}
-export function SettingInput({ handleChange, name, placeholder, id }: SProps) {
+type SProps = Omit<IProps, "type" | "children">
+
+export function SettingInput({ handleChange, name, placeholder }: SProps) {
+    const id = useId()
+
     return (
-        <input
-            type="text"
-            placeholder={placeholder}
-            name={name}
-            id={id}
-            onChange={handleChange}
-        />
+        <label
+            htmlFor={`${name}-${id}`}
+            className="flex flex-col gap-2 capitalize font-semibold max-w-[46%]"
+        >
+            {name}
+            <input
+                type="text"
+                placeholder={placeholder}
+                name={name}
+                id={`${name}-${id}`}
+                onChange={handleChange}
+                className="outline-none border border-sl-stroke text-base p-3 rounded-md placeholder:capitalize"
+            />
+        </label>
     )
 }

@@ -63,8 +63,7 @@ const router = createBrowserRouter([
                         path: "setting",
                         element: <SettingsLayout />,
                         children: [
-                            { index: true, element: <PersonalInfo /> },
-                            { path: "info", element: <PersonalInfo /> },
+                            { path: "/setting", element: <PersonalInfo /> },
                             {
                                 path: "employee",
                                 element: <EmployeeManagement />,

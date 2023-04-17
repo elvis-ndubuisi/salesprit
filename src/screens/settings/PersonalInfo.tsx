@@ -1,13 +1,33 @@
-import { useId } from "react"
+import React from "react"
 
 import Button from "../../components/Button"
 import { SettingInput } from "../../components/Input"
 
+type Props = {
+    firstname: string
+    lastname: string
+    email: string
+    position: string
+    dob: string
+    mobile: number
+}
+
 export default function PersonalInfo() {
-    const id = useId()
+    const [profile, setProfile] = React.useState({
+        firstname: "Aguaero",
+        lastname: "anaak",
+        email: "arguero@fakemeil.com",
+        mobile: "+9934853002",
+        position: "head cashier",
+        dob: "23/04/20234",
+    })
+
+    function updateProfile() {
+        alert(profile)
+    }
 
     return (
-        <section className="max-w-lg mx-auto flex flex-col gap-8">
+        <section className="max-w-xl mx-auto flex flex-col gap-8">
             <div>
                 <h4 className="section-heading">personal information</h4>
                 <p className="text-justify my-3">
@@ -18,49 +38,84 @@ export default function PersonalInfo() {
                 </p>
             </div>
 
-            <form action="">
+            <form className="flex flex-col gap-5">
                 <fieldset className="flex items-start justify-between">
-                    <label
-                        htmlFor={`firstname-${id}`}
-                        className="flex flex-col gap-2"
-                    >
-                        first name
-                        <SettingInput
-                            name="firstname"
-                            id={`firstname-${id}`}
-                            placeholder="placeholder"
-                            handleChange={() => {}}
-                        />
-                    </label>
+                    <SettingInput
+                        name="first name"
+                        placeholder={profile.firstname}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                firstname: event.target.value,
+                            }))
+                        }
+                    />
 
-                    <label
-                        htmlFor={`lastname-${id}`}
-                        className="flex flex-col gap-2"
-                    >
-                        first name
-                        <input type="text" name="" id={`lastname-${id}`} />
-                    </label>
+                    <SettingInput
+                        name="last name"
+                        placeholder={profile.lastname}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                lastname: event.target.value,
+                            }))
+                        }
+                    />
                 </fieldset>
 
                 <fieldset className="flex items-start justify-between">
-                    <label
-                        htmlFor={`firstname-${id}`}
-                        className="flex flex-col gap-2"
-                    >
-                        first name
-                        <input type="text" name="" id={`firstname-${id}`} />
-                    </label>
+                    <SettingInput
+                        name="email"
+                        placeholder={profile.email}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                email: event.target.value,
+                            }))
+                        }
+                    />
 
-                    <label
-                        htmlFor={`lastname-${id}`}
-                        className="flex flex-col gap-2"
-                    >
-                        first name
-                        <input type="text" name="" id={`lastname-${id}`} />
-                    </label>
+                    <SettingInput
+                        name="number"
+                        placeholder={profile.mobile}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                mobile: event.target.value,
+                            }))
+                        }
+                    />
                 </fieldset>
 
-                <Button isPrimary isBold={false} handleClick={() => {}}>
+                <fieldset className="flex items-start justify-between">
+                    <SettingInput
+                        name="date of birth"
+                        placeholder={profile.dob}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                dob: event.target.value,
+                            }))
+                        }
+                    />
+
+                    <SettingInput
+                        name="position"
+                        placeholder={profile.position}
+                        handleChange={(event) =>
+                            setProfile((prev) => ({
+                                ...prev,
+                                position: event.target.value,
+                            }))
+                        }
+                    />
+                </fieldset>
+
+                <Button
+                    isPrimary
+                    isBold={false}
+                    handleClick={() => updateProfile}
+                >
                     Save Changes
                 </Button>
             </form>
