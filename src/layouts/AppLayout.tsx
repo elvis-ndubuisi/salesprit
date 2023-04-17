@@ -2,7 +2,7 @@ import React from "react"
 import { Outlet, useLoaderData, defer, Await } from "react-router-dom"
 
 import Splash from "../screens/Splash"
-import sleep from "../utils/sleep"
+import { sleep } from "../helpers/libs"
 
 export default function AppLayout() {
     const { data } = useLoaderData()

@@ -1,7 +1,7 @@
 import React from "react"
 
 import NotificationCard from "../components/NotificationCard"
-import notifications from "../utils/notifications"
+import { notifications } from "../helpers/data"
 import { Notification as NotificationType } from "../types/Notifications"
 
 export default function Notification() {

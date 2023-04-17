@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom"
 
 import logo from "../assets/logo.png"
 import { MenuButton } from "../components/Button"
-import menuList from "../utils/menuList"
+import { menuList } from "../helpers/data"
 
 // TODO: Fixes pos index route nav active state
 export default function PosLayout() {

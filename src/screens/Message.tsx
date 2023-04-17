@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom"
 import { IoMdSend } from "react-icons/io"
 
 import { ChatHeader, ChatBubbleFrom, ChatBubbleTo } from "../components/Chat"
-import chats from "../utils/chats"
+import { chats } from "../helpers/data"
 import emojiIcon from "../assets/icons/emoji.svg"
 
 export default function Message() {

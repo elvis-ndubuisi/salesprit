@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react"
 import { NavLink } from "react-router-dom"
 import { FaBell } from "react-icons/fa"
 
-import { Menu } from "../utils/menuList"
+import { Menu } from "../helpers/data/menuList"
 
 interface IProps extends PropsWithChildren {
     isPrimary: boolean
