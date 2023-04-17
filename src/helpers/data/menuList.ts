@@ -1,11 +1,11 @@
-import homeIcon from "../assets/icons/home.svg"
-import dashboardIcon from "../assets/icons/dashboard.svg"
-import orderIcon from "../assets/icons/order.svg"
-import productIcon from "../assets/icons/product.svg"
-import notificationIcon from "../assets/icons/notification.svg"
-import customersIcon from "../assets/icons/customer.svg"
-import messageIcon from "../assets/icons/message.svg"
-import settingIcon from "../assets/icons/setting.svg"
+import homeIcon from "../../assets/icons/home.svg"
+import dashboardIcon from "../../assets/icons/dashboard.svg"
+import orderIcon from "../../assets/icons/order.svg"
+import productIcon from "../../assets/icons/product.svg"
+import notificationIcon from "../../assets/icons/notification.svg"
+import customersIcon from "../../assets/icons/customer.svg"
+import messageIcon from "../../assets/icons/message.svg"
+import settingIcon from "../../assets/icons/setting.svg"
 
 export type Menu = {
     title: string
