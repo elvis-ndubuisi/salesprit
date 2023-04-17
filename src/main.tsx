@@ -86,6 +86,7 @@ const router = createBrowserRouter([
                 ],
             },
             {
+                path: "auth",
                 element: <AuthLayout />,
                 children: [
                     { path: "login", element: <Login /> },
@@ -95,7 +96,6 @@ const router = createBrowserRouter([
                     { path: "logout", element: <div>log out elem</div> },
                 ],
             },
-            { path: "splash", element: <Splash /> },
         ],
     },
 ])
