@@ -4,7 +4,6 @@ import logo from "../assets/logo.png"
 import { MenuButton } from "../components/Button"
 import { menuList } from "../helpers/data"
 
-// TODO: Fixes pos index route nav active state
 export default function PosLayout() {
     return (
         <section className="grid grid-cols-[200px_minmax(300px,_1fr)_min(350px)]">
