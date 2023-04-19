@@ -29,19 +29,24 @@ export default function Input({
     )
 }
 
-type SProps = Omit<IProps, "type" | "children">
+type SProps = Omit<IProps, "children">
 
-export function SettingInput({ handleChange, name, placeholder }: SProps) {
+export function SettingInput({
+    handleChange,
+    name,
+    placeholder,
+    type = "text",
+}: SProps) {
     const id = useId()
 
     return (
         <label
             htmlFor={`${name}-${id}`}
-            className="flex flex-col gap-2 capitalize font-semibold max-w-[46%]"
+            className="flex flex-col gap-2 capitalize font-semibold"
         >
             {name}
             <input
-                type="text"
+                type={type}
                 placeholder={placeholder}
                 name={name}
                 id={`${name}-${id}`}

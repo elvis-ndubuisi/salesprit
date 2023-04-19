@@ -7,33 +7,39 @@ export default function Order() {
     return (
         <section className="h-screen col-span-2 p-5 grid grid-cols-2">
             <h2 className="section-heading">order#22355</h2>
-            <form className="col-span-2 grid grid-cols-3">
+            <form className="col-span-2 grid grid-cols-3 gap-4">
                 <SettingInput
+                    type="text"
                     name="recipent"
                     placeholder="sarah house"
                     handleChange={() => {}}
                 />
                 <SettingInput
+                    type="text"
                     name="gender"
                     placeholder="femail"
                     handleChange={() => {}}
                 />
                 <SettingInput
+                    type="text"
                     name="city"
                     placeholder="nigeria"
                     handleChange={() => {}}
                 />
                 <SettingInput
+                    type="number"
                     name="phone number"
                     placeholder="+(223) 930928098"
                     handleChange={() => {}}
                 />
                 <SettingInput
+                    type="text"
                     name="email address"
                     placeholder="sarah@gmail.com"
                     handleChange={() => {}}
                 />
                 <SettingInput
+                    type="text"
                     name="customer ID"
                     placeholder="224533"
                     handleChange={() => {}}

@@ -13,6 +13,12 @@ A fullstack Point-Of-Sales web app with elegant UI, well structured user experie
 -   Eslint: Code linting
 -   Google Analytics: Tracking activities on salesprit web app
 
+**Testing**
+
+-   Vitest
+-   @testing-library/react
+-   @testing-library/jest-dom
+
 ## Notes
 
 -   key notes

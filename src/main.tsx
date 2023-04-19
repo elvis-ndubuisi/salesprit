@@ -22,7 +22,8 @@ import Product from "./screens/product/Product"
 import AddProduct from "./screens/product/AddProduct"
 import EditProduct from "./screens/product/EditProduct"
 import Notification from "./screens/Notification"
-import Customers from "./screens/Customers"
+import Customers from "./screens/customers/Customers"
+import EditCustomer from "./screens/customers/EditCustomer"
 import Message from "./screens/Message"
 import PersonalInfo from "./screens/settings/PersonalInfo"
 import OpeningHours from "./screens/settings/OpeningHours"
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
                     { path: "product/edit", element: <EditProduct /> },
                     { path: "notification", element: <Notification /> },
                     { path: "customers", element: <Customers /> },
+                    { path: "customers/edit", element: <EditCustomer /> },
                     {
                         path: "message",
                         element: <MessageLayout />,

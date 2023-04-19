@@ -41,6 +41,7 @@ export default function PersonalInfo() {
             <form className="flex flex-col gap-5">
                 <fieldset className="flex items-start justify-between">
                     <SettingInput
+                        type="text"
                         name="first name"
                         placeholder={profile.firstname}
                         handleChange={(event) =>
@@ -52,6 +53,7 @@ export default function PersonalInfo() {
                     />
 
                     <SettingInput
+                        type="text"
                         name="last name"
                         placeholder={profile.lastname}
                         handleChange={(event) =>
@@ -65,6 +67,7 @@ export default function PersonalInfo() {
 
                 <fieldset className="flex items-start justify-between">
                     <SettingInput
+                        type="text"
                         name="email"
                         placeholder={profile.email}
                         handleChange={(event) =>
@@ -76,6 +79,7 @@ export default function PersonalInfo() {
                     />
 
                     <SettingInput
+                        type="text"
                         name="number"
                         placeholder={`${profile.mobile}`}
                         handleChange={(event) =>
@@ -89,6 +93,7 @@ export default function PersonalInfo() {
 
                 <fieldset className="flex items-start justify-between">
                     <SettingInput
+                        type="text"
                         name="date of birth"
                         placeholder={profile.dob}
                         handleChange={(event) =>
@@ -100,6 +105,7 @@ export default function PersonalInfo() {
                     />
 
                     <SettingInput
+                        type="text"
                         name="position"
                         placeholder={profile.position}
                         handleChange={(event) =>
