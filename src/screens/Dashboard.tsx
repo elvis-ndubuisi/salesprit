@@ -1,4 +1,12 @@
 import { GoKebabVertical } from "react-icons/go"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
+import { Doughnut } from "react-chartjs-2"
+
+ChartJS.register(ArcElement, Tooltip, Legend)
+
+{
+    /* <Doughnut data={...} /> */
+}
 
 export default function Dashboard() {
     return (

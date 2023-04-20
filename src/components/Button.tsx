@@ -20,7 +20,7 @@ export default function Button({
         <button
             type="button"
             onClick={handleClick}
-            className={`text-center flex items-center justify-center gap-3 ${
+            className={`text-center flex items-center justify-center gap-3 min-w-[8em] ${
                 isBold
                     ? "font-semibold text-lg py-3 px-7"
                     : "font-medium text-base py-2 px-4"
