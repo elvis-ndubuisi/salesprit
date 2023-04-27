@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import { store } from "./redux/store"
 
 import "./index.css"
-import AppLayout, { appLoader } from "./layouts/AppLayout"
+import AppLayout from "./layouts/AppLayout"
 import PosLayout from "./layouts/PosLayout"
 import AuthLayout from "./layouts/AuthLayout"
 import SettingsLayout from "./layouts/SettingsLayout"
@@ -35,7 +35,6 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout />,
-        loader: appLoader,
         children: [
             {
                 path: "/",
